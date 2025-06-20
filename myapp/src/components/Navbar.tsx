@@ -16,10 +16,8 @@ const Navbar = async () => {
               <span>Create Task</span>
             </Link><form action={async () => {
               'use server'
-              await  signOut(
-                "/")}
+              await  signOut({redirectTo: '/'})}
               }
-           
               >
                 <button type="submit" className="text-white hover:underline">Logout</button>
               </form></>
