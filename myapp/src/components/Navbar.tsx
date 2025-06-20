@@ -1,19 +1,39 @@
-import { auth } from '@/auth'
+import { auth, signIn,signOut} from '@/auth'
+
+import Link from 'next/link';
 import React from 'react'
 
 const Navbar = async () => {
     const session  = await auth();
   return (
-    <div>Navbar
-        {session ? (
-            <div>
-            <p>Welcome, {session.user?.name}</p>
-            <a href="/api/auth/signout">Sign Out</a>
-            </div>
-        ) : (
-            <a href="/api/auth/signin">Sign In</a>
-        )}
-    </div>
+   
+    <nav className="bg-gray-800 p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="text-white text-lg font-bold">MyApp</div>
+        <div className="space-x-4">
+          {session && session?.user ?(
+           <><Link href="" className="text-white hover:underline">
+              <span>Create Task</span>
+            </Link><form action={async () => {
+              'use server'
+              await  signOut(
+                "/")}
+              }
+           
+              >
+                <button type="submit" className="text-white hover:underline">Logout</button>
+              </form></>
+
+          ):(
+            <form action={async () => {
+              'use server'
+              await signIn('github')}}>
+              <button type='submit'>Login</button>
+            </form>
+          )}
+        </div>
+      </div>
+    </nav>
   )
 }
 
