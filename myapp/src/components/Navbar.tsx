@@ -12,7 +12,7 @@ const Navbar = async () => {
         <div className="text-white text-lg font-bold">MyApp</div>
         <div className="space-x-4">
           {session && session?.user ?(
-           <><Link href="" className="text-white hover:underline">
+           <><Link href="tasks/create" className="text-white hover:underline">
               <span>Create Task</span>
             </Link><form action={async () => {
               'use server'
