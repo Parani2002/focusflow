@@ -6,11 +6,13 @@ const page = () => {
       <h1 className="text-2xl font-bold mb-4">Create a New Task</h1>
       <form action={async (formData: FormData) => {
         'use server'
-        const title = formData.get('title') as string
-        const description = formData.get('description') as string
+        const title = formData.get('title') as string 
+        const description = formData.get('description') as string 
+        const dueDate = formData.get('dueDate') as string   
+        const priority = formData.get('priority') as string
         // Here you would typically call your backend API to create the task
-        console.log('Creating task:', { title, description })
-      }}>
+        console.log('Creating task:', { title, description , dueDate, priority})
+      }} className='border border-gray-300 p-4 rounded-lg shadow-md space-y-4'>
         <input type="text" name="title" placeholder="Task Title" required />
         <textarea name="description" placeholder="Task Description" required></textarea>
         <input type="date" name="dueDate" placeholder="Due Date" />
