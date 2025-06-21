@@ -12,9 +12,10 @@ import {
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
+
 const menuItems = [
-  { icon: Home, label: 'Dashboard', active: true },
-  { icon: CheckSquare, label: 'Tasks', count: 12 },
+  { icon: Home, label: 'Dashboard', active: true,links: '/' },
+  { icon: CheckSquare, label: 'Tasks', count: 12, links: '/tasks' },
   { icon: Calendar, label: 'Calendar' },
   { icon: Clock, label: 'Time Tracking' },
   { icon: Star, label: 'Important', count: 3 },
