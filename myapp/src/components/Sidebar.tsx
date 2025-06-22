@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 
 const menuItems = [
@@ -30,7 +31,10 @@ export const Sidebar = () => {
       <div className="p-4 border-b border-gray-200">
         <Button  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
           <Plus className="h-4 w-4 mr-2" />
-          New Task
+          <Link href="/tasks/create">
+           New Task
+          </Link>
+         
         </Button>
       </div>
       
@@ -47,7 +51,10 @@ export const Sidebar = () => {
           >
             <div className="flex items-center gap-3">
               <item.icon className="h-5 w-5" />
-              <span>{item.label}</span>
+              <Link href={item.links || '#'}>
+                  <span>{item.label}</span>
+              </Link>
+             
             </div>
             {item.count && (
               <span className="bg-gray-200 text-gray-600 text-xs px-2 py-1 rounded-full">
