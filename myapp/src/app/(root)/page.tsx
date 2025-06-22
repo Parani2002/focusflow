@@ -2,6 +2,7 @@ import { Clock, MoreHorizontal, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import React from 'react';
+import Link from 'next/link';
 
 const tasks = [
   {
@@ -50,10 +51,13 @@ const Home = () => {
           <h2 className="text-2xl font-bold text-gray-900">Todays Tasks</h2>
           <p className="text-gray-600 mt-1">You have {tasks.length} tasks to complete</p>
         </div>
-        <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
+        <Link href="/tasks/create">
+           <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
           <Plus className="h-4 w-4 mr-2" />
           Add Task
         </Button>
+        </Link>
+     
       </div>
 
       <div className="grid gap-4">

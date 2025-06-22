@@ -18,10 +18,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         <Sidebar />
 
 
-                        <main className="flex-1 p-6 lg:ml-0">
-                            <div className="max-w-6xl mx-auto">
+                        <main className="flex-1 p-6">
+                            
                                 {children}
-                            </div>
+                            
                         </main>
                     </div>
 

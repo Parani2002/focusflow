@@ -28,7 +28,7 @@ export const Sidebar = () => {
   return (
     <aside className="h-full w-64 bg-gray-50 border-r border-gray-200 relative">
       <div className="p-4 border-b border-gray-200">
-        <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
+        <Button  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
           <Plus className="h-4 w-4 mr-2" />
           New Task
         </Button>
