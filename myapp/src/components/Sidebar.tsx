@@ -25,6 +25,15 @@ const menuItems = [
   { icon: Settings, label: 'Settings' },
 ];
 
+// export async function getStaticProps() {
+//   // Here you can fetch any data you need for the sidebar
+//   // For now, we are returning an empty object
+
+//   return {
+//     props: { menuItems},
+//   };
+// }
+
 export const Sidebar = () => {
   return (
     <aside className="h-full w-64 bg-gray-50 border-r border-gray-200 relative">
