@@ -13,7 +13,7 @@ export const metadata : Metadata = {
   description: 'View details of a specific task',
 };
 
-const page =async  ({params} : TaskPageProps) => {
+const page = ({params} : TaskPageProps) => {
     const {id} = params;
    
   return (
